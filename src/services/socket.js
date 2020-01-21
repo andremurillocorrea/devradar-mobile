@@ -1,6 +1,6 @@
 import socketio from 'socket.io-client';
 
-const socket = socketio('http://192.168.15.18:3333', {
+const socket = socketio('http://172.20.10.3:3333', {
   autoConnect: false,
 });
 
@@ -26,10 +26,10 @@ function disconnect() {
   if (socket.connected) {
     socket.disconnect();
   }
+}
 
-  export {
-    connect,
-    disconnect,
-    subscribeToNewDevs,
-  }
+export {
+  connect,
+  disconnect,
+  subscribeToNewDevs,
 }
